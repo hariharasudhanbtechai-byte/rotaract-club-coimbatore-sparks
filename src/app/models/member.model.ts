@@ -1,0 +1,1 @@
+export interface Member { id: number; name: string; designation: string; image: string; bio?: string; socialLinks?: { instagram?: string; linkedin?: string; }; }

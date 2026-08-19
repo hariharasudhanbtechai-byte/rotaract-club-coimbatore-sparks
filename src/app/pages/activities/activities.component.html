@@ -1,0 +1,8 @@
+<section class="page-hero"><div class="container"><span class="eyebrow">OUR WORK</span><h1>Projects with purpose.</h1><p>From community service to youth-led initiatives, every project is a chance to turn ideas into meaningful action.</p></div></section>
+<section class="section"><div class="container"><div class="filter-row" role="group" aria-label="Filter activities">
+  @for (filter of filters; track filter) { <button type="button" class="filter" [class.selected]="activeFilter() === filter" [attr.aria-pressed]="activeFilter() === filter" (click)="setFilter(filter)">{{ filter }}</button> }
+</div>
+@if (filteredProjects().length) { <div class="row g-4">@for (project of filteredProjects(); track project.id) { <div class="col-lg-4 col-md-6"><app-project-card [project]="project" /></div> }</div> }
+@else { <div class="empty-state"><i class="bi bi-stars" aria-hidden="true"></i><h2>No projects found</h2><p>We're preparing stories from this category.<br>Check back soon for more Sparks in action.</p></div> }
+</div></section>
+<app-cta-banner />

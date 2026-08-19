@@ -1,0 +1,6 @@
+import { Event } from '../models/event.model';
+export const events: Event[] = [
+  { id: 1, title: 'Sparks Social Mixer', date: '24 AUG', time: '6:30 PM', venue: 'Venue to be announced', category: 'Fellowship', description: 'A placeholder gathering for good conversations, fresh ideas and new connections.', image: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=900&q=80', isUpcoming: true },
+  { id: 2, title: 'Community Action Day', date: '07 SEP', time: '9:00 AM', venue: 'Coimbatore', category: 'Community', description: 'Roll up your sleeves for a hands-on day of local service.', image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=900&q=80', isUpcoming: true },
+  { id: 3, title: 'Cultural Connect', date: '15 JUN', time: '5:00 PM', venue: 'Venue to be announced', category: 'Cultural', description: 'A placeholder evening of colour, stories and fellowship.', image: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=900&q=80', isUpcoming: false },
+];

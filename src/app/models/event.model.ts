@@ -1,0 +1,1 @@
+export interface Event { id: number; title: string; date: string; time?: string; venue?: string; description: string; image: string; category: string; isUpcoming: boolean; }

@@ -1,0 +1,16 @@
+<nav class="site-nav" aria-label="Primary navigation">
+  <div class="container nav-inner">
+    <a class="brand" routerLink="/" (click)="closeMenu()" aria-label="Rotaract Club of Coimbatore Sparks home">
+      <span class="brand-mark">✦</span><span><strong>SPARKS</strong><small>ROTARACT • CBE</small></span>
+    </a>
+    <button class="menu-toggle" type="button" (click)="menuOpen.set(!menuOpen())" [attr.aria-expanded]="menuOpen()" aria-label="Toggle navigation">
+      <i class="bi" [class.bi-x-lg]="menuOpen()" [class.bi-list]="!menuOpen()"></i>
+    </button>
+    <div class="nav-links" [class.is-open]="menuOpen()">
+      @for (link of links; track link.path) {
+        <a [routerLink]="link.path" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: link.path === '/' }" (click)="closeMenu()">{{ link.label }}</a>
+      }
+      <a class="btn btn-orange nav-join" routerLink="/membership" (click)="closeMenu()">Join the Sparks <i class="bi bi-arrow-up-right"></i></a>
+    </div>
+  </div>
+</nav>
